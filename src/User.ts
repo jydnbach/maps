@@ -1,6 +1,7 @@
 import { faker } from '@faker-js/faker';
 
-class User {
+// don't use export default in TS => not worry ab curly braces
+export class User {
   name: string;
   location: {
     lat: number;
