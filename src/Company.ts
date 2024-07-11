@@ -17,5 +17,3 @@ export class Company {
     };
   }
 }
-
-// http://console.developers.google.com/
