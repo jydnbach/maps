@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>My Map</title>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-sUIaM5PcRAtjdS1fa9l9erbLw9ihGeY"
+    ></script>
+    <script>
+      function initMap() {
+        var mapOptions = {
+          center: new google.maps.LatLng(37.7749, -122.4194),
+          zoom: 8,
+        };
+        var map = new google.maps.Map(
+          document.getElementById('map'),
+          mapOptions
+        );
+      }
+    </script>
   </head>
-  <body>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-sUIaM5PcRAtjdS1fa9l9erbLw9ihGeY"></script>
-    <script type="module" src="./src/index.ts"></script>
+  <body onload="initMap()">
+    <div id="map" style="height: 500px; width: 100%"></div>
   </body>
 </html>
