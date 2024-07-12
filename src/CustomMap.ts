@@ -1,4 +1,6 @@
 /// <reference types="@types/google.maps" />
+import { User } from './User';
+import { Company } from './Company';
 
 export class CustomMap {
   private googleMap: google.maps.Map;
@@ -15,4 +17,16 @@ export class CustomMap {
       }
     );
   }
+
+  addUserMakrer(user: User): void {
+    new google.maps.marker.AdvancedMarkerElement({
+      map: this.googleMap,
+      position: {
+        lat: user.location.lat,
+        lng: user.location.lng,
+      },
+    });
+  }
+
+  addCompanyMarker(company: Company): void {}
 }
