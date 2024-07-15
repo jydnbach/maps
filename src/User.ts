@@ -1,6 +1,5 @@
-import { faker } from '@faker-js/faker';
+import { faker } from "@faker-js/faker";
 
-// don't use export default in TS => not worry ab curly braces
 export class User {
   name: string;
   location: {
